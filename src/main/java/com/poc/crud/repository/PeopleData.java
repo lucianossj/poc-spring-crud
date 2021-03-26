@@ -15,7 +15,7 @@ public interface PeopleData {
     PersonModel getPerson(@Param("id") Integer id);
 
     @Delete("DELETE FROM people WHERE id=#{id}")
-    void deletePerson(@Param("id") Integer id);
+    Integer deletePerson(@Param("id") Integer id);
 
     @Insert("INSERT INTO people (name, age) VALUES (#{person.name}, #{person.age})")
     void insertPerson(@Param("person") PersonModel person);
